@@ -15,14 +15,15 @@
 */
 
 .page {
-  color: var(--accent-color);
-  font-family: var(--variablefont);
-  background-color: var(--bg-color);
+  color: var(--accent-color, #000);
+  font-family: var(--variablefont, "Inter-Variable", sans-serif);
+  background-color: var(--bg-color, #fff);
   background-image: var(--bg-image, none);
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+	font-variation-settings: 'wght' var(--text-weight, 400);
 }
 
 .header {
@@ -39,16 +40,16 @@
 
 .sections-settings {
   margin-inline: auto;
-  border: 2px solid var(--accent-color);
-  background-color: var(--bg-color);
+  border: 2px solid var(--accent-color, #000);
+  background-color: var(--bg-color, #fff);
   max-inline-size: 696px;
 }
 
 .header__logo {
   padding-block-start: clamp(7.5rem, 6.3318rem + 4.9844vw, 8.5rem);
   padding-block-end: 20px;
-  color: var(--accent-color);
-  font-family: var(--regularfont);
+  color: var(--accent-color, #000);
+  font-family: var(--regularfont, "PressStart2P", sans-serif );
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   font-style: normal;
   text-transform: uppercase;
@@ -56,8 +57,8 @@
 
 .header__title {
   padding-block-end: 25px;
-  color: var(--accent-color);
-  font-family: var(--regularfont);
+  color: var(--accent-color, #000);
+  font-family: var(--regularfont, "PressStart2P", sans-serif);
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   font-style: normal;
   line-height: normal;
@@ -68,8 +69,8 @@
   position: relative;
   border: none;
   padding: 0;
-  color: var(--accent-color);
-  font-family: var(--regularfont);
+  color: var(--accent-color, #000);
+  font-family: var(--regularfont, "PressStart2P", sans-serif);
   font-size: 14px;
   font-style: normal;
   line-height: normal;
@@ -139,12 +140,12 @@
 
 .list-title {
   padding: 4px 10px 4px 10px;
-  color: var(--accent-color);
-  font-family: var(--variablefont);
-  font-weight: var(--title-weight);
+  color: var(--accent-color, #000);
+  font-family: var(--variablefont, "Inter-Variable", sans-serif );
   font-size: 18px;
   font-style: normal;
   line-height: normal;
+	font-variation-settings: 'wght' var(--title-weight, 700);
 }
 
 .text-section-list {
@@ -155,9 +156,9 @@
 }
 
 .list-text {
-  color: var(--accent-color);
-  font-family: var(--variablefont);
-  font-weight: var(--text-weight);
+  color: var(--accent-color, #000);
+  font-family: var(--variablefont, "Inter-Variable", sans-serif);
+  font-variation-settings: 'wght' var(--text-weight, 400);
   font-size: 18px;
   font-style: normal;
   line-height: 21px; /* 116.667% */
@@ -170,7 +171,7 @@
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .label-text {
     text-shadow: none;
-    -webkit-text-stroke: 1px var(--stroke-color);
+    -webkit-text-stroke: 1px var(--stroke-color, #fff);
     text-stroke: 1px #fff;
   }
 }
@@ -181,8 +182,8 @@
   right: 11px;
   z-index: 1;
   opacity: 0.5;
-  color: var(--accent-color);
-  font-family: var(--regularfont);
+  color: var(--accent-color, #000);
+  font-family: var(--regularfont, "PressStart2P", sans-serif);
   font-weight: 400;
   font-size: 14px;
   font-style: normal;
@@ -225,16 +226,16 @@
 }
 
 .card__icon-button:focus-visible {
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color, #000);
   transition: border 0.3s ease;
 }
 
 .card__like-button {
   position: relative;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color, #000);
   padding: 9px 17px;
-  color: var(--button-text-color);
-  background: var(--bg-color);
+  color: var(--button-text-color, #fff);
+  background: var(--bg-color, #fff);
   cursor: pointer;
   inline-size: 130px;
   block-size: 38px;
@@ -245,7 +246,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: var(--accent-color);
+  background: var(--accent-color, #000);
   transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
@@ -262,13 +263,13 @@
 }
 
 .card__like-button:focus-visible {
-  box-shadow: 2px 2px 0px var(--accent-color);
+  box-shadow: 2px 2px 0px var(--accent-color, #000);
   transition: box-shadow 0.3s ease;
 }
 
 .button__text {
-  color: var(--button-text-color);
-  font-family: var(--regularfont);
+  color: var(--button-text-color, #fff);
+  font-family: var(--regularfont, );
   font-weight: 400;
   font-size: 14px;
   font-style: normal;
@@ -283,12 +284,12 @@
 }
 
 .like-icon:hover .core {
-  fill: var(--contour-color);
+  fill: var(--contour-color, #000);
   transition: fill 0.3s linear 0.03s;
 }
 
 .like-icon:hover .main-body {
-  fill: var(--contour-color);
+  fill: var(--contour-color, #000);
   transition: fill 0.3s linear 0.05s;
 }
 
@@ -297,31 +298,31 @@
 }
 
 .main-body {
-  transition: fill 0.3 linear 0.05s;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon:active .core {
-  fill: var(--active-heart-color);
+  fill: var(--active-heart-color, #ff0000);
   transition: fill 0.3s linear 0.03s;
 }
 
 .like-icon:active .main-body {
-  fill: var(--active-heart-color);
+  fill: var(--active-heart-color, #ff0000);
   transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--active-heart-color);
-  transition: fill 0.3 linear 0.06s;
+  fill: var(--active-heart-color, #ff0000);
+  transition: fill 0.3s linear 0.06s;
 }
 
 .like-icon.is-liked .core {
-  fill: var(--active-heart-color);
+  fill: var(--active-heart-color, #ff0000);
   transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--active-heart-color);
+  fill: var(--active-heart-color, #ff0000);
   transition: fill 0.3s linear 0.05s;
 }
 
@@ -401,10 +402,10 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color, #000);
   padding: 15px 20px;
-  color: var(--button-text-color);
-  background-color: var(--bg-color);
+  color: var(--button-text-color, #fff);
+  background-color: var(--bg-color, #fff);
 }
 
 .button-floppy::before {
@@ -412,7 +413,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: var(--accent-color);
+  background: var(--accent-color, #000);
   transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
@@ -430,7 +431,7 @@
 }
 
 .button-floppy:focus-visible {
-  box-shadow: 2px 2px 0px var(--accent-color);
+  box-shadow: 2px 2px 0px var(--accent-color, #000);
   transition: box-shadow 0.3s ease;
 }
 
@@ -439,7 +440,7 @@
   z-index: 5;
   width: 29px;
   height: 28px;
-  color: var(--button-text-color);
+  color: var(--button-text-color, #fff);
   mix-blend-mode: difference;
 }
 
@@ -457,7 +458,7 @@ dialog {
   justify-content: center;
   gap: 30px;
   padding: 30px 40px;
-  background: var(--bg-color);
+  background: var(--bg-color, #fff);
   transition: opacity 0.3s ease-in-out;
   inline-size: clamp(21.313rem, 20.96rem + 1.502vw, 22.313rem);
 }
@@ -477,7 +478,7 @@ dialog:not([open]) {
   position: relative;
   top: 10px;
   left: 6px;
-  color: var(--button-text-color);
+  color: var(--button-text-color, #fff);
   inline-size: 29px;
   block-size: 29px;
   mix-blend-mode: difference;
@@ -490,7 +491,7 @@ dialog::backdrop {
 
 .dialog-text {
   color: var(--accent-color, #000);
-  font-family: var(--regularfont);
+  font-family: var(--regularfont, "PressStart2P", sans-serif);
   font-weight: 400;
   font-size: 14px;
   font-style: normal;
@@ -508,7 +509,7 @@ dialog::backdrop {
   border: 2px solid var(--accent-color, #000);
   padding: 9px 17px;
   color: var(--accent-color, #000);
-  font-family: var(--regularfont);
+  font-family: var(--regularfont, "PressStart2P", sans-serif);
   font-weight: 400;
   font-size: 14px;
   font-style: normal;
@@ -522,7 +523,7 @@ dialog::backdrop {
 }
 
 .dialog-button:focus-visible {
-  box-shadow: 2px 2px 0px var(--accent-color);
+  box-shadow: 2px 2px 0px var(--accent-color, #000);
   transition: box-shadow 0.3s ease;
 }
 
