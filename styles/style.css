@@ -335,7 +335,7 @@
 }
 
 .like-icon .contour {
-  transition: fill 0.1s linear;
+  transition: fill 0.1s  linear;
 }
 
 /*------------FILTERS---------------*/
