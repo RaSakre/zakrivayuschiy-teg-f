@@ -1,18 +1,17 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --regularfont: "PressStart2P", sans-serif;
-  --variablefont: "Inter-Variable", sans-serif;
+  --regularfont: "PressStart2P", fantasy;
+  --variablefont: 'Inter', sans-serif;
   --text-weight: 400;
-  --green: #00cc14;
+	--green: #00cc14;
   --white: #fff;
-  --black: #000;
+	--black: #000;
   --title-weight: 700;
-  --heart-body-color: var(--black);
   --bg-color: #fff;
   --stroke-color: #fff;
   --button-text-color: var(--white);
-  --floppy-color: var(--black);
-  --contour-color: #000;
+  --floppy-color: #000;
+  --contour-color: var(--black);
   --sparks-color: #ff0000;
   --active-heart-color: #ff0000;
   --accent-color: #000;
