@@ -246,11 +246,11 @@
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   appearance: none;
-	padding: 9px 17px;
+  padding: 9px 17px;
 }
 
-.button::before{
-	content: "";
+.button::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -262,16 +262,16 @@
   block-size: 100%;
 }
 
-.button:hover::before{
-	transform: scaleX(1);
+.button:hover::before {
+  transform: scaleX(1);
 }
 
-.button:focus{
-	outline: none;
+.button:focus {
+  outline: none;
 }
 
-.button:focus-visible{
-	box-shadow: 2px 2px 0px var(--accent-color, #000);
+.button:focus-visible {
+  box-shadow: 2px 2px 0px var(--accent-color, #000);
 }
 
 .card__like-button {
@@ -287,7 +287,7 @@
   font-style: normal;
   line-height: 90%;
   mix-blend-mode: difference;
-	inline-size: max-content;
+  inline-size: max-content;
 }
 
 /*------------ANIMATIONS-----------*/
@@ -417,7 +417,6 @@
   padding: 15px 20px;
 }
 
-
 .footer__floppy-icon {
   position: relative;
   z-index: 5;
@@ -426,7 +425,6 @@
   color: var(--button-text-color, #fff);
   mix-blend-mode: difference;
 }
-
 
 /*------------DIALOG-----------*/
 
@@ -493,7 +491,6 @@
   line-height: 90%;
   text-transform: uppercase;
 }
-
 
 @media (width <= 375px) {
   .article__list-title {

@@ -7,7 +7,7 @@
 
 :root.theme-light {
   --bg-color: #fff;
-	--button-text-color: var(--white);
+  --button-text-color: var(--white);
   --stroke-color: #fff;
   --contour-color: var(--black);
   --accent-color: #000;
@@ -24,7 +24,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-		--button-text-color: var(--white);
+    --button-text-color: var(--white);
     --bg-color: #fff;
     --stroke-color: #fff;
     --contour-color: var(--black);
