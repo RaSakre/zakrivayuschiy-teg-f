@@ -48,7 +48,7 @@
   padding-block-start: clamp(7.5rem, 6.3318rem + 4.9844vw, 8.5rem);
   padding-block-end: 20px;
   color: var(--accent-color, #000);
-  font-family: var(--regularfont, "PressStart2P", sans-serif);
+  font-family: var(--regularfont, "PressStart2P", fantasy);
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   font-style: normal;
   text-transform: uppercase;
@@ -57,7 +57,7 @@
 .page__header-title {
   padding-block-end: 25px;
   color: var(--accent-color, #000);
-  font-family: var(--regularfont, "PressStart2P", sans-serif);
+  font-family: var(--regularfont, "PressStart2P", fantasy);
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   font-style: normal;
   line-height: normal;
@@ -69,7 +69,7 @@
   border: none;
   padding: 0;
   color: var(--accent-color, #000);
-  font-family: var(--regularfont, "PressStart2P", sans-serif);
+  font-family: var(--regularfont, "PressStart2P", fantasy);
   font-size: 14px;
   font-style: normal;
   line-height: normal;
@@ -246,16 +246,11 @@
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   appearance: none;
+	padding: 9px 17px;
 }
 
-.card__like-button {
-  padding: 9px 17px;
-  inline-size: 130px;
-  block-size: 38px;
-}
-
-.card__like-button::before {
-  content: "";
+.button::before{
+	content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -267,16 +262,21 @@
   block-size: 100%;
 }
 
-.card__like-button:hover::before {
-  transform: scaleX(1);
+.button:hover::before{
+	transform: scaleX(1);
 }
 
-.card__like-button:focus {
-  outline: none;
+.button:focus{
+	outline: none;
 }
 
-.card__like-button:focus-visible {
-  box-shadow: 2px 2px 0px var(--accent-color, #000);
+.button:focus-visible{
+	box-shadow: 2px 2px 0px var(--accent-color, #000);
+}
+
+.card__like-button {
+  inline-size: 130px;
+  block-size: 38px;
 }
 
 .button__text {
@@ -287,6 +287,7 @@
   font-style: normal;
   line-height: 90%;
   mix-blend-mode: difference;
+	inline-size: max-content;
 }
 
 /*------------ANIMATIONS-----------*/
@@ -416,32 +417,6 @@
   padding: 15px 20px;
 }
 
-.footer__button-floppy::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: var(--accent-color, #000);
-  transition: transform 0.5s ease-in-out;
-  transform: scaleX(0);
-  transform-origin: left;
-  inline-size: 100%;
-  block-size: 100%;
-}
-
-.footer__button-floppy:hover::before {
-  z-index: -1;
-  transform: scaleX(1);
-}
-
-.footer__button-floppy:focus {
-  outline: none;
-}
-
-.footer__button-floppy:focus-visible {
-  box-shadow: 2px 2px 0px var(--accent-color, #000);
-  transition: box-shadow 0.3s ease;
-}
 
 .footer__floppy-icon {
   position: relative;
@@ -452,9 +427,6 @@
   mix-blend-mode: difference;
 }
 
-.button__text {
-  white-space: nowrap;
-}
 
 /*------------DIALOG-----------*/
 
@@ -514,7 +486,6 @@
   justify-content: center;
   align-items: center;
   min-height: 38px;
-  padding: 9px 17px;
   font-family: var(--regularfont, "PressStart2P", fantasy);
   font-weight: 400;
   font-size: 14px;
@@ -523,44 +494,18 @@
   text-transform: uppercase;
 }
 
-.dialog-button:focus {
-  outline: none;
-}
-
-.dialog-button:focus-visible {
-  box-shadow: 2px 2px 0px var(--accent-color, #000);
-}
-
-.dialog-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  color: var(--stroke-color, #fff);
-  background-color: var(--stroke-color, #fff);
-  transform: scaleX(0);
-  transform-origin: left;
-  inline-size: 100%;
-  mix-blend-mode: difference;
-}
-
-.dialog-button:hover::before {
-  transition: transform 0.5s ease;
-  transform: scaleX(1);
-}
 
 @media (width <= 375px) {
-  .list-title {
+  .article__list-title {
     max-inline-size: 351px;
   }
   .problematic-text {
     inline-size: 317px;
   }
-  .button-floppy {
+  .footer__button-floppy {
     flex-direction: column;
   }
-  .text-section-list {
+  .article__text-section-list {
     padding: 23px 25px 18px 25px;
   }
   .cards-list {

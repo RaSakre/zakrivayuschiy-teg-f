@@ -23,7 +23,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root{
+  :root {
 		--button-text-color: var(--white);
     --bg-color: #fff;
     --stroke-color: #fff;
